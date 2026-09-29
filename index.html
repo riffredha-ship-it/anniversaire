@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pour Sessina ❤️</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:#08050b;color:#fff;font-family:Montserrat,sans-serif;
+  overflow-x:hidden;
+}
+canvas{position:fixed;inset:0;z-index:0;pointer-events:none}
+.screen{position:relative;z-index:1;min-height:100vh}
+.hero{
+  min-height:100vh;display:flex;align-items:center;justify-content:center;
+  text-align:center;padding:30px;position:relative;
+  background:radial-gradient(circle at 50% 40%,#35152f 0%,#120913 42%,#08050b 78%);
+}
+.glow{position:absolute;width:380px;height:380px;border-radius:50%;
+  background:#d83f8c;filter:blur(100px);opacity:.18;animation:pulse 5s infinite alternate}
+@keyframes pulse{to{transform:scale(1.35);opacity:.28}}
+.hero-content{max-width:850px;animation:rise 1.5s ease both}
+@keyframes rise{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:none}}
+.eyebrow{letter-spacing:6px;text-transform:uppercase;font-size:11px;color:#eeb4d1;margin-bottom:25px}
+h1,h2,h3,.serif{font-family:"Cormorant Garamond",serif}
+h1{font-size:clamp(64px,13vw,150px);font-weight:500;line-height:.8}
+.name{font-style:italic;background:linear-gradient(90deg,#fff,#f2a6ce,#fff);
+-webkit-background-clip:text;color:transparent;background-size:200%;animation:shine 4s infinite}
+@keyframes shine{50%{background-position:100%}}
+.subtitle{margin:35px auto 45px;color:#d7c7d2;font-weight:300;line-height:1.8;max-width:600px}
+.btn{
+ border:1px solid #d77bab;background:rgba(255,255,255,.04);color:#fff;
+ padding:15px 27px;border-radius:50px;text-decoration:none;cursor:pointer;
+ transition:.35s;letter-spacing:1px
+}
+.btn:hover{background:#d77bab;box-shadow:0 0 35px #d77bab55;transform:translateY(-3px)}
+.section{padding:110px 24px;max-width:1050px;margin:auto}
+.section-title{text-align:center;font-size:55px;font-weight:500;margin-bottom:18px}
+.section-sub{text-align:center;color:#aa9aa8;margin-bottom:60px}
+.counter{
+ display:grid;grid-template-columns:repeat(3,1fr);gap:15px;max-width:700px;margin:0 auto 30px
+}
+.counter div{padding:25px;border:1px solid #ffffff12;background:#ffffff05;border-radius:18px;text-align:center}
+.counter b{display:block;font-family:"Cormorant Garamond";font-size:48px;font-weight:500;color:#f2a6ce}
+.counter span{font-size:10px;letter-spacing:3px;color:#a99ca7;text-transform:uppercase}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{
+ padding:35px 25px;border:1px solid #ffffff12;border-radius:22px;
+ background:linear-gradient(145deg,#ffffff08,#ffffff02);transition:.4s
+}
+.card:hover{transform:translateY(-8px);border-color:#d77bab55}
+.icon{font-size:30px;margin-bottom:20px}.card h3{font-size:27px;margin-bottom:12px}.card p{color:#aaa0aa;line-height:1.7;font-size:14px}
+.letter-wrap{max-width:760px;margin:auto}
+.letter{
+ background:#f7edf3;color:#24151f;border-radius:4px;padding:55px 50px;
+ box-shadow:0 25px 80px #0008;position:relative;
+ transform:rotate(-.5deg)
+}
+.letter:before{content:"";position:absolute;inset:12px;border:1px solid #b98da5;pointer-events:none}
+.letter h2{font-size:42px;text-align:center;margin-bottom:30px}
+.letter p{font-family:"Cormorant Garamond",serif;font-size:23px;line-height:1.65;margin:14px 0}
+.signature{text-align:right;margin-top:30px;font-style:italic;font-size:27px}
+.reveal{
+ text-align:center;min-height:90vh;display:flex;align-items:center;justify-content:center;
+ background:radial-gradient(circle,#301329,#08050b 70%)
+}
+.reveal-box{max-width:760px}
+.big-heart{font-size:80px;filter:drop-shadow(0 0 25px #ff72b4);animation:heart 1.2s infinite alternate}
+@keyframes heart{to{transform:scale(1.12)}}
+.final-title{font-size:clamp(55px,10vw,105px);line-height:.9;margin:25px 0}
+.final-text{color:#c9bbc6;line-height:1.8}
+footer{text-align:center;padding:40px;color:#6f626c;font-size:11px;letter-spacing:2px}
+@media(max-width:700px){
+ .cards{grid-template-columns:1fr}.counter{grid-template-columns:1fr 1fr}.counter div:last-child{grid-column:1/-1}
+ .letter{padding:40px 25px}.letter p{font-size:20px}.section{padding:80px 18px}
+}
+</style>
+</head>
+<body>
+<canvas id="stars"></canvas>
+
+<main>
+<section class="hero screen">
+ <div class="glow"></div>
+ <div class="hero-content">
+  <div class="eyebrow">Une petite surprise de Redha</div>
+  <h1>Pour <span class="name">Sessina</span></h1>
+  <p class="subtitle">
+   Il y a des personnes qui rendent une année plus belle simplement en étant là.
+   Aujourd'hui, cette page est entièrement pour toi.
+  </p>
+  <a class="btn" href="#histoire">Ouvrir la surprise ✦</a>
+ </div>
+</section>
+
+<section id="histoire" class="section">
+ <div class="eyebrow" style="text-align:center">29 septembre → aujourd'hui</div>
+ <h2 class="section-title">Un an de nous</h2>
+ <p class="section-sub">Un an, ce n'est peut-être qu'une durée. Mais avec toi, c'est une collection de moments.</p>
+ <div class="counter">
+  <div><b>1</b><span>année</span></div>
+  <div><b>365</b><span>jours</span></div>
+  <div><b>∞</b><span>souvenirs à venir</span></div>
+ </div>
+</section>
+
+<section class="section">
+ <div class="cards">
+  <article class="card"><div class="icon">🌙</div><h3>Les petits moments</h3><p>Les conversations, les rires, les petites habitudes… Ce sont souvent eux qui deviennent les plus beaux souvenirs.</p></article>
+  <article class="card"><div class="icon">✨</div><h3>Les souvenirs</h3><p>Chaque moment partagé a ajouté une petite lumière à cette première année. Et l'histoire ne fait que commencer.</p></article>
+  <article class="card"><div class="icon">🌹</div><h3>La suite</h3><p>Il reste tellement de choses à découvrir, de journées à vivre et de souvenirs à créer ensemble.</p></article>
+ </div>
+</section>
+
+<section class="section">
+ <div class="letter-wrap">
+  <div class="eyebrow" style="text-align:center">Une lettre pour toi</div>
+  <div class="letter">
+   <h2>À ma Sessina,</h2>
+   <p>Joyeux anniversaire ❤️</p>
+   <p>Ça fait déjà un an que nos chemins se sont rapprochés, et quand je repense à tout ce qu'on a vécu, je me rends compte à quel point cette année est passée vite.</p>
+   <p>Je voulais simplement te rappeler aujourd'hui que tu comptes énormément pour moi. Merci pour les sourires, les discussions, les souvenirs et tous ces petits moments qui ont rendu cette année spéciale.</p>
+   <p>Je te souhaite une année remplie de bonheur, de réussite, de beaux projets et de moments qui te feront sourire. Et surtout, j'espère pouvoir être là pour en partager encore beaucoup avec toi.</p>
+   <p>Profite de ta journée, elle est à ton image : unique. ✨</p>
+   <div class="signature">— Redha ❤️</div>
+  </div>
+ </div>
+</section>
+
+<section class="reveal screen">
+ <div class="reveal-box">
+  <div class="big-heart">♥</div>
+  <div class="eyebrow">Et maintenant...</div>
+  <h2 class="final-title">Joyeux anniversaire<br><span class="name">Sessina</span></h2>
+  <p class="final-text">Pour tes 365 jours à venir : encore plus de sourires, de rêves réalisés et de souvenirs inoubliables. ❤️</p>
+ </div>
+</section>
+</main>
+<footer>Fait avec soin par Redha · Pour Sessina</footer>
+
+<script>
+const c=document.getElementById('stars'),ctx=c.getContext('2d');
+let stars=[];
+function resize(){c.width=innerWidth;c.height=innerHeight;stars=Array.from({length:Math.min(180,innerWidth/5)},()=>({x:Math.random()*c.width,y:Math.random()*c.height,r:Math.random()*1.4+.2,a:Math.random()}))}
+function draw(){
+ ctx.clearRect(0,0,c.width,c.height);
+ stars.forEach(s=>{s.a+=.008;ctx.globalAlpha=.25+.35*Math.sin(s.a);ctx.beginPath();ctx.arc(s.x,s.y,s.r,0,Math.PI*2);ctx.fillStyle="#fff";ctx.fill()});
+ requestAnimationFrame(draw)
+}
+addEventListener('resize',resize);resize();draw();
+
+document.querySelector('.btn').addEventListener('click',()=>{
+ for(let i=0;i<55;i++){
+   const h=document.createElement('div');h.textContent=Math.random()>.5?'♥':'✦';
+   h.style.position='fixed';h.style.left=(40+Math.random()*20)+'vw';h.style.top='45vh';
+   h.style.zIndex=5;h.style.pointerEvents='none';h.style.color=Math.random()>.5?'#f28abb':'#fff';
+   h.style.fontSize=(10+Math.random()*18)+'px';h.style.transition='transform 1.4s ease,opacity 1.4s ease';
+   document.body.appendChild(h);
+   requestAnimationFrame(()=>{h.style.transform=`translate(${(Math.random()-.5)*500}px,${-150-Math.random()*400}px) rotate(${Math.random()*360}deg)`;h.style.opacity=0});
+   setTimeout(()=>h.remove(),1500);
+ }
+});
+</script>
+</body>
+</html>
